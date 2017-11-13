@@ -4,3 +4,5 @@ HDRNeuralNetwork.DataSource/obj
 HDRNeuralNetwork.DataSource.Test/bin
 HDRNeuralNetwork.DataSource.Test/obj
 *.user
+packages
+TestResults

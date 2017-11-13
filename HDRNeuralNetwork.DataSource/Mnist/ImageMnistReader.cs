@@ -1,9 +1,10 @@
-﻿using System.IO;
+﻿using HDRNeuralNetwork.DataSource.Interfaces;
+using System.IO;
 using System.Net;
 
-namespace HDRNeuralNetwork.DataSource
+namespace HDRNeuralNetwork.DataSource.Mnist
 {
-    public class ImageMnistReader : MnistReader<byte[]>
+    public class ImageMnistReader : MnistReader<byte[]>, IImageReader
     {
         private int size;
 

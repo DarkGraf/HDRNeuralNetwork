@@ -40,14 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MnistDataProvider.cs" />
-    <Compile Include="ImageMnistReader.cs" />
-    <Compile Include="LabelMnistReader.cs" />
-    <Compile Include="MnistReader.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="Interfaces\IImageReader.cs" />
+    <Compile Include="Interfaces\ILabelReader.cs" />
+    <Compile Include="Mnist\ImageMnistReader.cs" />
+    <Compile Include="Mnist\LabelMnistReader.cs" />
+    <Compile Include="Mnist\MnistReader.cs" />
     <Compile Include="Pattern.cs" />
     <Compile Include="PatternCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

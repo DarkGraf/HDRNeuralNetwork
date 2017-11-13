@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using HDRNeuralNetwork.DataSource.Mnist;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HDRNeuralNetwork.DataSource.Test
 {

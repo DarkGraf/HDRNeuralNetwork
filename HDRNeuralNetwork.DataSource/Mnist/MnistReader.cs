@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Net;
 
-namespace HDRNeuralNetwork.DataSource
+namespace HDRNeuralNetwork.DataSource.Mnist
 {
     public abstract class MnistReader<T>
     {
