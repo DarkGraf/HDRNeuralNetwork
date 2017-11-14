@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDRNeuralNetwork.DataSource", "HDRNeuralNetwork.DataSource\HDRNeuralNetwork.DataSource.csproj", "{B853B063-1028-4641-9853-7BADEAFD83EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDRNeuralNetwork.DataSource.Test", "HDRNeuralNetwork.DataSource.Test\HDRNeuralNetwork.DataSource.Test.csproj", "{382E21DB-A922-44F6-B186-26A3176A253B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDRNeuralNetwork.WinApp", "HDRNeuralNetwork.WinApp\HDRNeuralNetwork.WinApp.csproj", "{73C3AD6A-2233-4AE0-89F8-119DBB9CB794}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{382E21DB-A922-44F6-B186-26A3176A253B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{382E21DB-A922-44F6-B186-26A3176A253B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{382E21DB-A922-44F6-B186-26A3176A253B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C3AD6A-2233-4AE0-89F8-119DBB9CB794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C3AD6A-2233-4AE0-89F8-119DBB9CB794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C3AD6A-2233-4AE0-89F8-119DBB9CB794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C3AD6A-2233-4AE0-89F8-119DBB9CB794}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
