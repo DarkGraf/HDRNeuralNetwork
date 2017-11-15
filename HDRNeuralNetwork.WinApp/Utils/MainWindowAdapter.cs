@@ -1,4 +1,5 @@
 ﻿using HDRNeuralNetwork.WinApp.Interfaces;
+using HDRNeuralNetwork.WinApp.ViewModels;
 using System;
 using System.Windows;
 
@@ -52,8 +53,8 @@ namespace HDRNeuralNetwork.WinApp.Utils
         {
             if (!initialized)
             {
-                var vm = viewModelFactory.Create(this);
-                WpfWindow.DataContext = vm;
+                object viewModel = viewModelFactory.Create(this);
+                WpfWindow.DataContext = viewModel;
                 initialized = true;
             }
         }

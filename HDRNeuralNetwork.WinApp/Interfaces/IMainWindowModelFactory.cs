@@ -1,9 +1,7 @@
-﻿using HDRNeuralNetwork.WinApp.ViewModels;
-
-namespace HDRNeuralNetwork.WinApp.Interfaces
+﻿namespace HDRNeuralNetwork.WinApp.Interfaces
 {
     public interface IMainWindowModelFactory
     {
-        MainWindowModel Create(IWindow window);
+        object Create(IWindow window);
     }
 }

@@ -10,7 +10,6 @@ namespace HDRNeuralNetwork.WinApp
         public IWindow ResolveWindow()
         {
             IMainWindowModelFactory viewModelFactory = new MainWindowModelFactory();
-
             Window mainWindow = new MainWindow();
             return new MainWindowAdapter(mainWindow, viewModelFactory);
         }

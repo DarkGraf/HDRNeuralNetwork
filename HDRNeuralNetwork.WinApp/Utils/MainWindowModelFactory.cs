@@ -6,7 +6,7 @@ namespace HDRNeuralNetwork.WinApp.Utils
 {
     public class MainWindowModelFactory : IMainWindowModelFactory
     {
-        public MainWindowModel Create(IWindow window)
+        public object Create(IWindow window)
         {
             if (window == null)
             {
