@@ -1,4 +1,4 @@
-﻿namespace HDRNeuralNetwork.DataSource
+﻿namespace HDRNeuralNetwork.Bll
 {
     public class Pattern
     {

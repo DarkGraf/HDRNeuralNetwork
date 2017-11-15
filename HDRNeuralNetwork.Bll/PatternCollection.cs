@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HDRNeuralNetwork.DataSource
+namespace HDRNeuralNetwork.Bll
 {
     public class PatternCollection : List<Pattern>
     {

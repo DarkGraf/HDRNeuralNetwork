@@ -1,4 +1,5 @@
-﻿using HDRNeuralNetwork.DataSource.Interfaces;
+﻿using HDRNeuralNetwork.Bll;
+using HDRNeuralNetwork.DataSource.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

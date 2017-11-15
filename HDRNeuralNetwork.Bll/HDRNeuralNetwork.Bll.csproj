@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B853B063-1028-4641-9853-7BADEAFD83EB}</ProjectGuid>
+    <ProjectGuid>{D35B8F0D-9656-4BAA-A8C8-76572FE73283}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HDRNeuralNetwork.DataSource</RootNamespace>
-    <AssemblyName>HDRNeuralNetwork.DataSource</AssemblyName>
+    <RootNamespace>HDRNeuralNetwork.Bll</RootNamespace>
+    <AssemblyName>HDRNeuralNetwork.Bll</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,19 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProvider.cs" />
-    <Compile Include="Interfaces\IImageReader.cs" />
-    <Compile Include="Interfaces\ILabelReader.cs" />
-    <Compile Include="Mnist\ImageMnistReader.cs" />
-    <Compile Include="Mnist\LabelMnistReader.cs" />
-    <Compile Include="Mnist\MnistReader.cs" />
+    <Compile Include="Interfaces\IDataProvider.cs" />
+    <Compile Include="MainModel.cs" />
+    <Compile Include="Pattern.cs" />
+    <Compile Include="PatternCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HDRNeuralNetwork.Bll\HDRNeuralNetwork.Bll.csproj">
-      <Project>{d35b8f0d-9656-4baa-a8c8-76572fe73283}</Project>
-      <Name>HDRNeuralNetwork.Bll</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{382E21DB-A922-44F6-B186-26A3176A253B}</ProjectGuid>
+    <ProjectGuid>{655A1333-FDBB-4FB9-948D-54F0B975FD83}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HDRNeuralNetwork.DataSource.Test</RootNamespace>
-    <AssemblyName>HDRNeuralNetwork.DataSource.Test</AssemblyName>
+    <RootNamespace>HDRNeuralNetwork.Bll.Test</RootNamespace>
+    <AssemblyName>HDRNeuralNetwork.Bll.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -59,9 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ImageMnistReaderTest.cs" />
-    <Compile Include="LabelMnistReaderTest.cs" />
-    <Compile Include="DataProviderTest.cs" />
+    <Compile Include="MainModelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,14 +67,8 @@
       <Project>{D35B8F0D-9656-4BAA-A8C8-76572FE73283}</Project>
       <Name>HDRNeuralNetwork.Bll</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HDRNeuralNetwork.DataSource\HDRNeuralNetwork.DataSource.csproj">
-      <Project>{b853b063-1028-4641-9853-7badeafd83eb}</Project>
-      <Name>HDRNeuralNetwork.DataSource</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mnist\t10k-images.idx3-ubyte" />
-    <None Include="Mnist\t10k-labels.idx1-ubyte" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

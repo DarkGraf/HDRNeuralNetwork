@@ -1,9 +1,11 @@
-﻿using HDRNeuralNetwork.DataSource.Interfaces;
+﻿using HDRNeuralNetwork.Bll;
+using HDRNeuralNetwork.Bll.Interfaces;
+using HDRNeuralNetwork.DataSource.Interfaces;
 using System.IO;
 
 namespace HDRNeuralNetwork.DataSource
 {
-    public class DataProvider
+    public class DataProvider : IDataProvider
     {
         readonly IImageReader imageReader;
         readonly ILabelReader labelReader;
