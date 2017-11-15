@@ -4,10 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HDRNeuralNetwork.WinApp.Views"
+        xmlns:converters="clr-namespace:HDRNeuralNetwork.WinApp.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <converters:ByteArrayToImageSourceConverter
+            x:Key="byteArrayToImageSourceConverter" />
+    </Window.Resources>
+    
     <Grid>
-        <Image
-            Source="{Binding BitmapSource}"/>
+        <Image>
+            <Image.Source>
+                <MultiBinding 
+                    Converter="{StaticResource byteArrayToImageSourceConverter}">
+                    <Binding
+                        Path="ImageSourceMetadata" />
+                    <Binding
+                        Path="ImageSource" />
+                </MultiBinding>
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>

@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\ByteArrayToImageSourceConverter.cs" />
     <Compile Include="Interfaces\IMainWindowModelFactory.cs" />
     <Compile Include="Interfaces\IWindow.cs" />
     <Compile Include="PoorMansDIContainer.cs" />

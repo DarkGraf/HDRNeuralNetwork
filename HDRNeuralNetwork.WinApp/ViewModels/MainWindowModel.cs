@@ -1,13 +1,15 @@
 ﻿using HDRNeuralNetwork.WinApp.Interfaces;
 using System;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace HDRNeuralNetwork.WinApp.ViewModels
 {
     public class MainWindowModel
     {
         private readonly IWindow window;
+
+        int dpi = 96;
+        int width = 128;
+        int height = 128;
 
         public MainWindowModel(IWindow window)
         {
@@ -23,9 +25,6 @@ namespace HDRNeuralNetwork.WinApp.ViewModels
 
         private void CreateBitmapSource()
         {
-            double dpi = 96;
-            int width = 128;
-            int height = 128;
             byte[] pixelData = new byte[width * height];
 
             for (int y = 0; y < height; ++y)
@@ -37,10 +36,17 @@ namespace HDRNeuralNetwork.WinApp.ViewModels
                 }
             }
 
-            BitmapSource = BitmapSource.Create(width, height, dpi, dpi,
-                PixelFormats.Gray8, null, pixelData, width);
+            ImageSource = pixelData;
         }
 
-        public BitmapSource BitmapSource { get; set; }
+        public byte[] ImageSource { get; set; }
+
+        public string ImageSourceMetadata
+        {
+            get
+            {
+                return $"{dpi},{width},{height}";
+            }
+        }
     }
 }
