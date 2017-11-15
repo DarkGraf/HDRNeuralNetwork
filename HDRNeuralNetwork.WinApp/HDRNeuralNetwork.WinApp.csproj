@@ -106,6 +106,16 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HDRNeuralNetwork.Bll\HDRNeuralNetwork.Bll.csproj">
+      <Project>{D35B8F0D-9656-4BAA-A8C8-76572FE73283}</Project>
+      <Name>HDRNeuralNetwork.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HDRNeuralNetwork.DataSource\HDRNeuralNetwork.DataSource.csproj">
+      <Project>{B853B063-1028-4641-9853-7BADEAFD83EB}</Project>
+      <Name>HDRNeuralNetwork.DataSource</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

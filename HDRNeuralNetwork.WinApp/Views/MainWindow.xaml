@@ -13,7 +13,8 @@
     </Window.Resources>
     
     <Grid>
-        <Image>
+        <Image
+            Stretch="None">
             <Image.Source>
                 <MultiBinding 
                     Converter="{StaticResource byteArrayToImageSourceConverter}">

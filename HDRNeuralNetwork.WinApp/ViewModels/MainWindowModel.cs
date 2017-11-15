@@ -1,4 +1,5 @@
-﻿using HDRNeuralNetwork.WinApp.Interfaces;
+﻿using HDRNeuralNetwork.Bll;
+using HDRNeuralNetwork.WinApp.Interfaces;
 using System;
 
 namespace HDRNeuralNetwork.WinApp.ViewModels
@@ -6,39 +7,29 @@ namespace HDRNeuralNetwork.WinApp.ViewModels
     public class MainWindowModel
     {
         private readonly IWindow window;
+        private readonly MainModel mainModel;
 
         int dpi = 96;
-        int width = 128;
-        int height = 128;
+        int width = 28;
+        int height = 28;
 
-        public MainWindowModel(IWindow window)
+        public MainWindowModel(IWindow window, MainModel mainModel)
         {
             if (window == null)
             {
                 throw new ArgumentNullException(nameof(window));
             }
-
-            this.window = window;
-
-            CreateBitmapSource();
-        }
-
-        private void CreateBitmapSource()
-        {
-            byte[] pixelData = new byte[width * height];
-
-            for (int y = 0; y < height; ++y)
+            if (mainModel == null)
             {
-                int yIndex = y * width;
-                for (int x = 0; x < width; ++x)
-                {
-                    pixelData[x + yIndex] = (byte)(x + y);
-                }
+                throw new ArgumentNullException(nameof(mainModel));
             }
 
-            ImageSource = pixelData;
-        }
+            this.window = window;
+            this.mainModel = mainModel;
 
+            ImageSource = mainModel.Collections[0][0].Image;
+        }
+      
         public byte[] ImageSource { get; set; }
 
         public string ImageSourceMetadata
