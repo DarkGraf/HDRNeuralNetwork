@@ -13,7 +13,6 @@ namespace HDRNeuralNetwork.WinApp
     {
         public IWindow ResolveWindow()
         {
-#warning Вынести в CompositionRoot.
             ImageMnistReader imageReader = new ImageMnistReader(@"..\..\..\HDRNeuralNetwork.DataSource.Test\Mnist\t10k-images.idx3-ubyte");
             LabelMnistReader labelReader = new LabelMnistReader(@"..\..\..\HDRNeuralNetwork.DataSource.Test\Mnist\t10k-labels.idx1-ubyte");
             DataProvider provider = new DataProvider(imageReader, labelReader);

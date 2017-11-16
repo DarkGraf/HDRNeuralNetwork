@@ -1,6 +1,9 @@
 ﻿using HDRNeuralNetwork.Bll;
 using HDRNeuralNetwork.WinApp.Interfaces;
 using System;
+using System.Linq;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace HDRNeuralNetwork.WinApp.ViewModels
 {
@@ -27,17 +30,10 @@ namespace HDRNeuralNetwork.WinApp.ViewModels
             this.window = window;
             this.mainModel = mainModel;
 
-            ImageSource = mainModel.Collections[0][0].Image;
+            int i = 0;
+            Patterns = mainModel.Collections[0].Select(v => new PatternViewModel(i++, BitmapSource.Create(width, height, dpi, dpi, PixelFormats.Gray8, null, v.Image, width), v.Label)).ToArray();
         }
-      
-        public byte[] ImageSource { get; set; }
 
-        public string ImageSourceMetadata
-        {
-            get
-            {
-                return $"{dpi},{width},{height}";
-            }
-        }
+        public PatternViewModel[] Patterns { get; }
     }
 }

@@ -4,26 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HDRNeuralNetwork.WinApp.Views"
-        xmlns:converters="clr-namespace:HDRNeuralNetwork.WinApp.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Window.Resources>
-        <converters:ByteArrayToImageSourceConverter
-            x:Key="byteArrayToImageSourceConverter" />
-    </Window.Resources>
-    
     <Grid>
-        <Image
-            Stretch="None">
-            <Image.Source>
-                <MultiBinding 
-                    Converter="{StaticResource byteArrayToImageSourceConverter}">
-                    <Binding
-                        Path="ImageSourceMetadata" />
-                    <Binding
-                        Path="ImageSource" />
-                </MultiBinding>
-            </Image.Source>
-        </Image>
+        <ListBox
+            ItemsSource="{Binding Patterns}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid ShowGridLines="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Text="{Binding Index}" />
+                        <Image
+                            Grid.Column="1"
+                            Source="{Binding Image}" />
+                        <TextBlock
+                            Grid.Column="2"
+                            FontSize="14"
+                            Text="{Binding Label}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
