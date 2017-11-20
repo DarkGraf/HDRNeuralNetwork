@@ -7,7 +7,7 @@ namespace HDRNeuralNetwork.DataSource.Test
     public class LabelMnistReaderTest
     {
         [TestMethod]
-        [DeploymentItem("..\\..\\..\\HDRNeuralNetwork.DataSource.Test\\Mnist\\t10k-labels.idx1-ubyte")]
+        [DeploymentItem("..\\..\\..\\HDRNeuralNetwork.WinApp\\Mnist\\t10k-labels.idx1-ubyte")]
         public void LabelMnistReaderTesting()
         {
             LabelMnistReader reader = new LabelMnistReader("t10k-labels.idx1-ubyte");

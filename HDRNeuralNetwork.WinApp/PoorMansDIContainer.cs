@@ -13,8 +13,8 @@ namespace HDRNeuralNetwork.WinApp
     {
         public IWindow ResolveWindow()
         {
-            ImageMnistReader imageReader = new ImageMnistReader(@"..\..\..\HDRNeuralNetwork.DataSource.Test\Mnist\t10k-images.idx3-ubyte");
-            LabelMnistReader labelReader = new LabelMnistReader(@"..\..\..\HDRNeuralNetwork.DataSource.Test\Mnist\t10k-labels.idx1-ubyte");
+            ImageMnistReader imageReader = new ImageMnistReader(@"Mnist\t10k-images.idx3-ubyte");
+            LabelMnistReader labelReader = new LabelMnistReader(@"Mnist\t10k-labels.idx1-ubyte");
             DataProvider provider = new DataProvider(imageReader, labelReader);
             MainModel mainModel = new MainModel(new IDataProvider[] { provider });
             IMainWindowModelFactory viewModelFactory = new MainWindowModelFactory(mainModel);

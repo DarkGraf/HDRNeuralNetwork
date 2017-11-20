@@ -75,8 +75,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mnist\t10k-images.idx3-ubyte" />
-    <None Include="Mnist\t10k-labels.idx1-ubyte" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

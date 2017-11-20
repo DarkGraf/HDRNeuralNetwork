@@ -7,7 +7,7 @@ namespace HDRNeuralNetwork.DataSource.Test
     public class ImageMnistReaderTest
     {
         [TestMethod]
-        [DeploymentItem("..\\..\\..\\HDRNeuralNetwork.DataSource.Test\\Mnist\\t10k-images.idx3-ubyte")]
+        [DeploymentItem("..\\..\\..\\HDRNeuralNetwork.WinApp\\Mnist\\t10k-images.idx3-ubyte")]
         public void ImageMnistReaderTesting()
         {
             ImageMnistReader reader = new ImageMnistReader("t10k-images.idx3-ubyte");
